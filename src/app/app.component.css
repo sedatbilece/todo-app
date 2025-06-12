@@ -1,0 +1,239 @@
+
+/* Temel Stil Ayarlamaları */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5; /* Açık gri arka plan */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  width: 90%;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2a65ba; /* Koyu mavi başlık */
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #e3f2fd; /* Açık mavi arka plan */
+}
+
+/* Giriş Bölümü Stilleri */
+.input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 640px) { /* Small (sm) breakpoint */
+  .input-section {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.input-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  min-width: 120px; /* Label için sabit genişlik */
+  text-align: right;
+}
+
+.work-input {
+  flex-grow: 1;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #c9d2db;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Padding'in genişliği etkilememesi için */
+}
+
+.work-input:focus {
+  outline: none;
+  border-color: #5b9bd5;
+  box-shadow: 0 0 0 3px rgba(91, 155, 213, 0.3);
+}
+
+.save-button {
+  padding: 12px 25px;
+  background-color: #3f87ea; /* Mavi buton */
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(63, 135, 234, 0.3);
+}
+
+.save-button:hover {
+  background-color: #2a65ba; /* Koyu mavi hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(63, 135, 234, 0.4);
+}
+
+.save-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(63, 135, 234, 0.4);
+}
+
+/* Ayırıcı Çizgi Stili */
+.separator {
+  border: none;
+  border-top: 2px solid #e0e0e0;
+  margin: 40px 0;
+}
+
+/* Yapılacaklar Listesi Bölümü Stilleri */
+.todo-list-section {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.list-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: #444;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* NgClass ile Gelen Renklendirmeler */
+.todo-item.bg-red-100 {
+  background-color: #ffebee; /* Açık kırmızı */
+}
+
+.todo-item.border-red-400 {
+  border-color: #ef9a9a; /* Orta kırmızı */
+}
+
+.todo-item.bg-gray-50 {
+  background-color: #fdfdfd; /* Çok açık gri */
+}
+
+.todo-item.border-gray-200 {
+  border-color: #f0f0f0; /* Çok açık gri çerçeve */
+}
+
+.todo-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.item-text {
+  flex-grow: 1;
+  margin-right: 15px;
+  word-break: break-word; /* Uzun kelimeleri kırmak için */
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 8px 15px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.edit-button {
+  background-color: #ffc107; /* Sarı buton */
+  color: #333;
+}
+
+.edit-button:hover {
+  background-color: #e0a800; /* Koyu sarı hover */
+  transform: translateY(-1px);
+}
+
+.delete-button {
+  background-color: #dc3545; /* Kırmızı buton */
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c82333; /* Koyu kırmızı hover */
+  transform: translateY(-1px);
+}
+
+/* Boş Liste Mesajı */
+.empty-list-message {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  padding: 20px;
+  font-size: 1.1rem;
+}
+
+/* Küçük Ekranlar İçin Ekstra Düzenlemeler */
+@media (max-width: 639px) {
+  .input-label {
+    text-align: left; /* Mobil görünümde sola hizala */
+    min-width: unset; /* Genişliği sıfırla */
+  }
+
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .item-text {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  .button-group {
+    width: 100%;
+    justify-content: flex-end; /* Butonları sağa hizala */
+  }
+}

@@ -1,27 +1,31 @@
-# TodoApp
+## Todo App
+This is a simple web-based Todo application built with Angular. It allows users to manage their daily tasks efficiently.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.2.
+## Features
+Add Tasks: Quickly add new tasks to your todo list.
 
-## Development server
+Update Tasks: Modify existing tasks. When a task is selected for update, its entry in the list will be highlighted in red.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Delete Tasks: Remove completed or unwanted tasks from the list.
 
-## Code scaffolding
+<img src="./Docs/ss1.png">
+<img src="./Docs/ss2.png">
+<img src="./Docs/ss3.png">
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Technologies Used
+Angular: A platform and framework for building single-page client applications using HTML and TypeScript.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+HTML: For structuring the web content.
 
-## Running unit tests
+CSS: For styling the application, ensuring a clean and responsive user interface.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## How to Use
+Enter Task: Type your task into the input field.
 
-## Running end-to-end tests
+Save Task: Click the Save button to add the task to the list.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Update Task: Click the Update button next to a task to bring its content into the input field. Make your changes and click the "Güncelle" button again to save them. The selected task will be highlighted in red.
 
-## Further help
+Delete Task: Click the Delete button next to a task to remove it from the list.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
